@@ -1,5 +1,0 @@
-1,outlook,sunny,overcast,rainy
-2,temperature,hot,mild,cool
-3,humidity,high,normal
-4,windy,TRUE,FALSE
-5,play,yes,no

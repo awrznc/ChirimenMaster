@@ -10,8 +10,8 @@ import java.util.Arrays;
 public class Main {
 
 	//入力：正解付き学習データD，特徴集合A
-	private static String Data[][]	=	new String[1000][];		//data.txt用
-	private static String DataX[][]	=	new String[1000][];		//no.txt用
+	private static String Data[][]	=	new String[1001][];		//data.txt用
+	private static String DataX[][]	=	new String[1001][];		//no.txt用
 	private static int DataLength[]	=	{0,0};					//{data.txtの行数 , no.txtの行数}
 
 
@@ -21,8 +21,16 @@ public class Main {
 
 
 	//テキストファイルの名前
-	private static String DataName1 =	"tiridata.txt";
-	private static String DataName2 =	"tirino.txt";
+	//private static String DataName1 =	"tiridataA.txt";
+	//private static String DataName1 =	"tiridataB.txt";
+	//private static String DataName1 =	"tiridataC.txt";
+	private static String DataName1 =	"tiridataD.txt";
+	//private static String DataName1 =	"tiridataE.txt";
+	//private static String DataName2 =	"tirinoA.txt";
+	//private static String DataName2 =	"tirinoB.txt";
+	//private static String DataName2 =	"tirinoC.txt";
+	private static String DataName2 =	"tirinoD.txt";
+	//private static String DataName2 =	"tirinoE.txt";
 
 	//平均情報量
 	private static double Entropy[][]	= {	{0},		//関数内の平均情報量
@@ -84,7 +92,7 @@ public class Main {
 		IrregularWord = new String[DataLength[1]];
 		Arrays.fill(IrregularWord, "NaN");
 
-		Plus.MM();
+		//Plus.MM();
 
 		//ここから処理がメイン
 		for(int j=0;j<10;j++){
@@ -409,7 +417,7 @@ public class Main {
 		}
 
 		//System.out.println("IrregularWordのなかみ");
-		Sub.StringArrayInvisible(IrregularWord);
+		//Sub.StringArrayInvisible(IrregularWord);
 
 		//System.out.println("wordのなかみ");
 		//StringArrayInvisible(word);
@@ -483,10 +491,10 @@ public class Main {
 		}
 		//中身がNaNの場合は0を返す．それ以外はそのまま返す
 		if(Double.isNaN(Entropy)){
-			System.out.println("0.0");
+			//System.out.println("0.0");
 			Entropy = 0.0;
 		}else{
-			System.out.println(Entropy);
+			//System.out.println(Entropy);
 		}
 		return Entropy;
 	}
